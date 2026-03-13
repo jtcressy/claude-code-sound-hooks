@@ -1,0 +1,5 @@
+{
+  "name": "sound-hooks",
+  "description": "Audio notifications for all 18 Claude Code hook events with per-hook config, agent sounds, and git commit detection",
+  "author": { "name": "Joel Cressy" }
+}

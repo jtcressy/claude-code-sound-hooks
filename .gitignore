@@ -1,0 +1,9 @@
+# Local config overrides (per-user)
+hooks/config/hooks-config.local.json
+
+# Log output
+hooks/logs/
+
+# OS files
+.DS_Store
+Thumbs.db

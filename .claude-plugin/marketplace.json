@@ -1,0 +1,13 @@
+{
+  "name": "jtcressy-claude-plugins",
+  "description": "Personal Claude Code plugins by Joel Cressy",
+  "owner": { "name": "Joel Cressy" },
+  "plugins": [
+    {
+      "name": "sound-hooks",
+      "source": "./",
+      "description": "Audio notifications for all 18 Claude Code hook events",
+      "version": "1.0.0"
+    }
+  ]
+}

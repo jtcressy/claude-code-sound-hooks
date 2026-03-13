@@ -1,0 +1,260 @@
+{
+  "description": "Sound hooks - plays audio notifications for all 18 Claude Code hook events",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ${CLAUDE_PLUGIN_ROOT}/hooks/scripts/hooks.py",
+            "timeout": 5000,
+            "statusMessage": "PreToolUse",
+            "async": true,
+            "silent": true
+          }
+        ]
+      }
+    ],
+    "PermissionRequest": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ${CLAUDE_PLUGIN_ROOT}/hooks/scripts/hooks.py",
+            "timeout": 5000,
+            "statusMessage": "PermissionRequest",
+            "async": true,
+            "silent": true
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ${CLAUDE_PLUGIN_ROOT}/hooks/scripts/hooks.py",
+            "timeout": 5000,
+            "statusMessage": "PostToolUse",
+            "async": true,
+            "silent": true
+          }
+        ]
+      }
+    ],
+    "PostToolUseFailure": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ${CLAUDE_PLUGIN_ROOT}/hooks/scripts/hooks.py",
+            "timeout": 5000,
+            "statusMessage": "PostToolUseFailure",
+            "async": true,
+            "silent": true
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ${CLAUDE_PLUGIN_ROOT}/hooks/scripts/hooks.py",
+            "timeout": 5000,
+            "statusMessage": "UserPromptSubmit",
+            "async": true,
+            "silent": true
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ${CLAUDE_PLUGIN_ROOT}/hooks/scripts/hooks.py",
+            "timeout": 5000,
+            "statusMessage": "Notification",
+            "async": true,
+            "silent": true
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ${CLAUDE_PLUGIN_ROOT}/hooks/scripts/hooks.py",
+            "timeout": 5000,
+            "statusMessage": "Stop",
+            "async": true,
+            "silent": true
+          }
+        ]
+      }
+    ],
+    "SubagentStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ${CLAUDE_PLUGIN_ROOT}/hooks/scripts/hooks.py",
+            "timeout": 5000,
+            "statusMessage": "SubagentStart",
+            "async": true,
+            "silent": true
+          }
+        ]
+      }
+    ],
+    "SubagentStop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ${CLAUDE_PLUGIN_ROOT}/hooks/scripts/hooks.py",
+            "timeout": 5000,
+            "statusMessage": "SubagentStop",
+            "async": true,
+            "silent": true
+          }
+        ]
+      }
+    ],
+    "PreCompact": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ${CLAUDE_PLUGIN_ROOT}/hooks/scripts/hooks.py",
+            "timeout": 5000,
+            "statusMessage": "PreCompact",
+            "once": true,
+            "async": true,
+            "silent": true
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ${CLAUDE_PLUGIN_ROOT}/hooks/scripts/hooks.py",
+            "timeout": 5000,
+            "statusMessage": "SessionStart",
+            "once": true,
+            "async": true,
+            "silent": true
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ${CLAUDE_PLUGIN_ROOT}/hooks/scripts/hooks.py",
+            "timeout": 5000,
+            "statusMessage": "SessionEnd",
+            "once": true,
+            "async": true,
+            "silent": true
+          }
+        ]
+      }
+    ],
+    "Setup": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ${CLAUDE_PLUGIN_ROOT}/hooks/scripts/hooks.py",
+            "timeout": 30000,
+            "statusMessage": "Setup",
+            "async": true,
+            "silent": true
+          }
+        ]
+      }
+    ],
+    "TeammateIdle": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ${CLAUDE_PLUGIN_ROOT}/hooks/scripts/hooks.py",
+            "timeout": 5000,
+            "statusMessage": "TeammateIdle",
+            "async": true,
+            "silent": true
+          }
+        ]
+      }
+    ],
+    "TaskCompleted": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ${CLAUDE_PLUGIN_ROOT}/hooks/scripts/hooks.py",
+            "timeout": 5000,
+            "statusMessage": "TaskCompleted",
+            "async": true,
+            "silent": true
+          }
+        ]
+      }
+    ],
+    "ConfigChange": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ${CLAUDE_PLUGIN_ROOT}/hooks/scripts/hooks.py",
+            "timeout": 5000,
+            "statusMessage": "ConfigChange",
+            "async": true,
+            "silent": true
+          }
+        ]
+      }
+    ],
+    "WorktreeCreate": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ${CLAUDE_PLUGIN_ROOT}/hooks/scripts/hooks.py",
+            "timeout": 5000,
+            "statusMessage": "WorktreeCreate",
+            "async": true,
+            "silent": true
+          }
+        ]
+      }
+    ],
+    "WorktreeRemove": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ${CLAUDE_PLUGIN_ROOT}/hooks/scripts/hooks.py",
+            "timeout": 5000,
+            "statusMessage": "WorktreeRemove",
+            "async": true,
+            "silent": true
+          }
+        ]
+      }
+    ]
+  }
+}
