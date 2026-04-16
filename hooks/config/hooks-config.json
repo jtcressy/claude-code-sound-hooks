@@ -17,5 +17,14 @@
   "disableConfigChangeHook": true,
   "disableWorktreeCreateHook": true,
   "disableWorktreeRemoveHook": true,
+  "disablePermissionDeniedHook": false,
+  "disableStopFailureHook": false,
+  "disableTaskCreatedHook": true,
+  "disablePostCompactHook": true,
+  "disableInstructionsLoadedHook": true,
+  "disableCwdChangedHook": true,
+  "disableFileChangedHook": true,
+  "disableElicitationHook": true,
+  "disableElicitationResultHook": true,
   "disableLogging": true
 }
