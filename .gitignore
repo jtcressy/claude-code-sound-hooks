@@ -4,6 +4,10 @@ hooks/config/hooks-config.local.json
 # Log output
 hooks/logs/
 
+# Python bytecode cache
+__pycache__/
+*.py[cod]
+
 # OS files
 .DS_Store
 Thumbs.db
