@@ -1,6 +1,6 @@
 {
   "name": "sound-hooks",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Audio notifications for all 26 Claude Code hook events with per-hook config, agent sounds, and git commit detection",
   "author": { "name": "Joel Cressy" }
 }

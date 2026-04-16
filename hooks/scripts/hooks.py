@@ -13,6 +13,7 @@ Agent Support:
   Agent frontmatter hooks support 7 hooks: PreToolUse, PostToolUse, PermissionRequest, PermissionDenied, PostToolUseFailure, Stop, SubagentStop
 """
 
+import os
 import sys
 import json
 import subprocess
@@ -20,6 +21,18 @@ import re
 import platform
 import argparse
 from pathlib import Path
+
+# Claude Code launches hooks with a minimal environment that omits
+# XDG_RUNTIME_DIR. Without it, paplay/pw-play (and most audio players
+# that route through PulseAudio/PipeWire) can't locate the user's audio
+# server and silently fail. Default it to the standard per-UID socket
+# dir on Linux, but only when the caller hasn't set one — so any custom
+# value inherited from the launching shell still wins.
+if platform.system() == "Linux" and not os.environ.get("XDG_RUNTIME_DIR"):
+    try:
+        os.environ["XDG_RUNTIME_DIR"] = f"/run/user/{os.getuid()}"
+    except AttributeError:
+        pass
 
 # Windows-only module for playing WAV files
 try:
