@@ -3,13 +3,14 @@
 Claude Code Hook Handler
 =============================================
 This script handles events from Claude Code and plays sounds for different hook events.
-Supports all 18 Claude Code hooks: https://code.claude.com/docs/en/hooks
+Supports all 26 Claude Code hooks: https://code.claude.com/docs/en/hooks
+(plus a legacy "Setup" entry kept for backwards compatibility)
 
 Special handling for git commits: plays pretooluse-git-committing.mp3
 
 Agent Support:
   Use --agent=<name> to play agent-specific sounds from agent_* folders.
-  Agent frontmatter hooks support 6 hooks: PreToolUse, PostToolUse, PermissionRequest, PostToolUseFailure, Stop, SubagentStop
+  Agent frontmatter hooks support 7 hooks: PreToolUse, PostToolUse, PermissionRequest, PermissionDenied, PostToolUseFailure, Stop, SubagentStop
 """
 
 import sys
@@ -31,31 +32,41 @@ except ImportError:
 HOOK_SOUND_MAP = {
     "PreToolUse": "pretooluse",
     "PermissionRequest": "permissionrequest",
+    "PermissionDenied": "permissiondenied",
     "PostToolUse": "posttooluse",
     "PostToolUseFailure": "posttoolusefailure",
     "UserPromptSubmit": "userpromptsubmit",
     "Notification": "notification",
     "Stop": "stop",
+    "StopFailure": "stopfailure",
     "SubagentStart": "subagentstart",
     "SubagentStop": "subagentstop",
+    "TaskCreated": "taskcreated",
+    "TaskCompleted": "taskcompleted",
     "PreCompact": "precompact",
+    "PostCompact": "postcompact",
+    "InstructionsLoaded": "instructionsloaded",
     "SessionStart": "sessionstart",
     "SessionEnd": "sessionend",
     "Setup": "setup",
     "TeammateIdle": "teammateidle",
-    "TaskCompleted": "taskcompleted",
     "ConfigChange": "configchange",
+    "CwdChanged": "cwdchanged",
+    "FileChanged": "filechanged",
+    "Elicitation": "elicitation",
+    "ElicitationResult": "elicitationresult",
     "WorktreeCreate": "worktreecreate",
     "WorktreeRemove": "worktreeremove"
 }
 
 # ===== AGENT HOOK EVENT TO SOUND FOLDER MAPPING =====
 # Maps agent hook events to agent-specific sound folders
-# Only the 6 hooks that actually fire in agent contexts are mapped
+# Only the 7 hooks that actually fire in agent contexts are mapped
 AGENT_HOOK_SOUND_MAP = {
     "PreToolUse": "agent_pretooluse",
     "PostToolUse": "agent_posttooluse",
     "PermissionRequest": "agent_permissionrequest",
+    "PermissionDenied": "agent_permissiondenied",
     "PostToolUseFailure": "agent_posttoolusefailure",
     "Stop": "agent_stop",
     "SubagentStop": "agent_subagentstop"

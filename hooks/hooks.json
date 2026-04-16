@@ -1,5 +1,5 @@
 {
-  "description": "Sound hooks - plays audio notifications for all 18 Claude Code hook events",
+  "description": "Sound hooks - plays audio notifications for all 26 Claude Code hook events",
   "hooks": {
     "PreToolUse": [
       {
@@ -250,6 +250,133 @@
             "command": "python3 ${CLAUDE_PLUGIN_ROOT}/hooks/scripts/hooks.py",
             "timeout": 5000,
             "statusMessage": "WorktreeRemove",
+            "async": true,
+            "silent": true
+          }
+        ]
+      }
+    ],
+    "PermissionDenied": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ${CLAUDE_PLUGIN_ROOT}/hooks/scripts/hooks.py",
+            "timeout": 5000,
+            "statusMessage": "PermissionDenied",
+            "async": true,
+            "silent": true
+          }
+        ]
+      }
+    ],
+    "StopFailure": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ${CLAUDE_PLUGIN_ROOT}/hooks/scripts/hooks.py",
+            "timeout": 5000,
+            "statusMessage": "StopFailure",
+            "async": true,
+            "silent": true
+          }
+        ]
+      }
+    ],
+    "TaskCreated": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ${CLAUDE_PLUGIN_ROOT}/hooks/scripts/hooks.py",
+            "timeout": 5000,
+            "statusMessage": "TaskCreated",
+            "async": true,
+            "silent": true
+          }
+        ]
+      }
+    ],
+    "PostCompact": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ${CLAUDE_PLUGIN_ROOT}/hooks/scripts/hooks.py",
+            "timeout": 5000,
+            "statusMessage": "PostCompact",
+            "once": true,
+            "async": true,
+            "silent": true
+          }
+        ]
+      }
+    ],
+    "InstructionsLoaded": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ${CLAUDE_PLUGIN_ROOT}/hooks/scripts/hooks.py",
+            "timeout": 5000,
+            "statusMessage": "InstructionsLoaded",
+            "async": true,
+            "silent": true
+          }
+        ]
+      }
+    ],
+    "CwdChanged": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ${CLAUDE_PLUGIN_ROOT}/hooks/scripts/hooks.py",
+            "timeout": 5000,
+            "statusMessage": "CwdChanged",
+            "async": true,
+            "silent": true
+          }
+        ]
+      }
+    ],
+    "FileChanged": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ${CLAUDE_PLUGIN_ROOT}/hooks/scripts/hooks.py",
+            "timeout": 5000,
+            "statusMessage": "FileChanged",
+            "async": true,
+            "silent": true
+          }
+        ]
+      }
+    ],
+    "Elicitation": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ${CLAUDE_PLUGIN_ROOT}/hooks/scripts/hooks.py",
+            "timeout": 5000,
+            "statusMessage": "Elicitation",
+            "async": true,
+            "silent": true
+          }
+        ]
+      }
+    ],
+    "ElicitationResult": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ${CLAUDE_PLUGIN_ROOT}/hooks/scripts/hooks.py",
+            "timeout": 5000,
+            "statusMessage": "ElicitationResult",
             "async": true,
             "silent": true
           }
